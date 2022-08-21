@@ -108,7 +108,7 @@ class _MainScreenState extends State<MainScreen> {
               initialValue: 500,
               onChange: (double value) {
                 print(value.toString());
-                if(value.toString()=="5000"){
+                if(value.toString()=="5000.0"){
                   AwesomeDialog(
                     context: context,
                     dialogType: DialogType.SUCCES,
@@ -118,21 +118,12 @@ class _MainScreenState extends State<MainScreen> {
                     btnCancelText: "Ok",
                     dismissOnTouchOutside: false,
                     btnOkOnPress: () {},
-                  )..show().then((value) {
-
-                  });
+                  )..show();
                 }
-                // callback providing a value while its being changed (with a pan gesture)
               },
-              onChangeStart: (double startValue) {
-                // callback providing a starting value (when a pan gesture starts)
-              },
-              onChangeEnd: (double endValue) {
-                // ucallback providing an ending value (when a pan gesture ends)
-              },
-              innerWidget: (double value) {
-                // use your custom widget inside the slider (gets a slider value from the callback)
-              },
+              onChangeStart: (double startValue) {},
+              onChangeEnd: (double endValue) {},
+              innerWidget: (double value) {},
             ),
           )
                 ],
